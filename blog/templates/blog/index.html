@@ -1,13 +1,66 @@
 {% extends "base.html" %}
+{% load static %}
 
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
 
 
 
 {% block title %} My Blog {% endblock %}
 
 
-{% block content  %}
-<h1>Welcome to my blog!</h1>
+{% block content %}
+<header id="main-navigation">
+    <h1>
+        <a href="">Bryan's Blog</a>
 
-{% endblock  %}
+        <nav>
+            <a href="">All posts</a>
 
+        </nav>
+    </h1>
+
+
+</header>
+
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/max.png'  %}" alt="bryan - Author of this blog">
+        <h2>BRYAN'S BLOG</h2>
+    </header>
+    <p>Hi, I'm Bryan and this is my blog. I'm a software engineer and I love to postabout my experiences in the
+        techworld.</p>
+</section>
+
+<section id="latest-posts">
+    <h2>My latest Thoughts</h2>
+
+    <ul>
+        <li>
+            <article class="post">
+                <a href="">
+                    <img src="{% static 'blog/images/mountains.jpg'  %}" alt="Mountain hiking">
+                    <div class="post__content">
+                        <h3>Mountain hiking</h3>
+                        <p>There's nothing like the views you get when hiking in the mountains! And I wasn't even
+                            prepared for what happened whilst I was enjoying the view!. </p>
+                    </div>
+                </a>
+
+
+            </article>
+        </li>
+    </ul>
+
+</section>
+
+<section id="about">
+    <h2>What I Do</h2>
+    <p>I love programming, I love to help others and I enjoy exploring new technologies.</p>
+
+    <p>My goal is to keep on growing as a developer - and I hope I could help you too.</p>
+</section>
+
+{% endblock %}
