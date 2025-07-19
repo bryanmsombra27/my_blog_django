@@ -3,6 +3,7 @@
 
 
 {% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post.css' %}">
 <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
 
@@ -12,19 +13,6 @@
 
 
 {% block content %}
-<header id="main-navigation">
-    <h1>
-        <a href="">Bryan's Blog</a>
-
-        <nav>
-            <a href="">All posts</a>
-
-        </nav>
-    </h1>
-
-
-</header>
-
 <section id="welcome">
     <header>
         <img src="{% static 'blog/images/max.png'  %}" alt="bryan - Author of this blog">
@@ -38,20 +26,7 @@
     <h2>My latest Thoughts</h2>
 
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <img src="{% static 'blog/images/mountains.jpg'  %}" alt="Mountain hiking">
-                    <div class="post__content">
-                        <h3>Mountain hiking</h3>
-                        <p>There's nothing like the views you get when hiking in the mountains! And I wasn't even
-                            prepared for what happened whilst I was enjoying the view!. </p>
-                    </div>
-                </a>
-
-
-            </article>
-        </li>
+        {% include 'blog/includes/post.html' %}
     </ul>
 
 </section>

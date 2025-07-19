@@ -12,6 +12,20 @@
 </head>
 
 <body>
+    <header id="main-navigation">
+        <h1>
+            <a href="{% url 'index'   %}">Bryan's Blog</a>
+
+            <nav>
+                <a href="{% url 'posts-page'  %}">All posts</a>
+
+            </nav>
+        </h1>
+
+
+    </header>
+
+
     {% block content %} {% endblock %}
 </body>
 

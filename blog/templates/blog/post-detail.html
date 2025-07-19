@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock %}
+
+
+
+{% block title %} Post title {% endblock %}
+
+
+{% block content %}
+
+<section id="summary">
+    <h2> Post Title</h2>
+    <article>
+        <img src="{% static 'blog/images/mountains.jpg'  %}" alt="post title">
+        <address>
+            By Bryan
+        </address>
+        <div>Last updated on <time>July 10th </time> </div>
+
+    </article>
+
+</section>
+
+<main>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum laboriosam consequuntur quasi delectus! Saepe
+        deserunt facilis soluta et minus non, officia doloribus dolores eum atque nam dolorum distinctio nihil nulla.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse eos ipsam officia omnis, unde expedita obcaecati
+        neque ducimus ipsa asperiores, libero voluptates voluptate, dolor voluptatem quam voluptatibus at quisquam.
+        Optio.
+    </p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum laboriosam consequuntur quasi delectus! Saepe
+        deserunt facilis soluta et minus non, officia doloribus dolores eum atque nam dolorum distinctio nihil nulla.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse eos ipsam officia omnis, unde expedita obcaecati
+        neque ducimus ipsa asperiores, libero voluptates voluptate, dolor voluptatem quam voluptatibus at quisquam.
+        Optio.
+    </p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum laboriosam consequuntur quasi delectus! Saepe
+        deserunt facilis soluta et minus non, officia doloribus dolores eum atque nam dolorum distinctio nihil nulla.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse eos ipsam officia omnis, unde expedita obcaecati
+        neque ducimus ipsa asperiores, libero voluptates voluptate, dolor voluptatem quam voluptatibus at quisquam.
+        Optio.
+    </p>
+
+
+</main>
+
+
+
+{% endblock %}
