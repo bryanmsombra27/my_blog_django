@@ -13,13 +13,13 @@
 {% block content %}
 
 <section id="summary">
-    <h2> Post Title</h2>
+    <h2> {{post.title}}</h2>
     <article>
-        <img src="{% static 'blog/images/mountains.jpg'  %}" alt="post title">
+        <img src="{% static 'blog/images/'|add:post.image  %}" alt="{{post.title}}">
         <address>
-            By Bryan
+            By {{post.author}}
         </address>
-        <div>Last updated on <time>July 10th </time> </div>
+        <div>Last updated on <time>{{post.date|date:"d M Y"}} </time> </div>
 
     </article>
 
@@ -27,27 +27,7 @@
 
 <main>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum laboriosam consequuntur quasi delectus! Saepe
-        deserunt facilis soluta et minus non, officia doloribus dolores eum atque nam dolorum distinctio nihil nulla.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse eos ipsam officia omnis, unde expedita obcaecati
-        neque ducimus ipsa asperiores, libero voluptates voluptate, dolor voluptatem quam voluptatibus at quisquam.
-        Optio.
-    </p>
-
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum laboriosam consequuntur quasi delectus! Saepe
-        deserunt facilis soluta et minus non, officia doloribus dolores eum atque nam dolorum distinctio nihil nulla.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse eos ipsam officia omnis, unde expedita obcaecati
-        neque ducimus ipsa asperiores, libero voluptates voluptate, dolor voluptatem quam voluptatibus at quisquam.
-        Optio.
-    </p>
-
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum laboriosam consequuntur quasi delectus! Saepe
-        deserunt facilis soluta et minus non, officia doloribus dolores eum atque nam dolorum distinctio nihil nulla.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse eos ipsam officia omnis, unde expedita obcaecati
-        neque ducimus ipsa asperiores, libero voluptates voluptate, dolor voluptatem quam voluptatibus at quisquam.
-        Optio.
-    </p>
-
+    <p>{{post.content|linebreaks }}</p>
 
 </main>
 
