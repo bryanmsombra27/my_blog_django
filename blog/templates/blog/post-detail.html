@@ -43,6 +43,29 @@
 
 </main>
 
+<section id="comment-form">
+    <h2>Add a comment</h2>
+
+    <form action="{% url 'post-detail-page' post.slug %}" method="POST">
+        {% csrf_token %}
+        {% for field in comment_form %}
+
+        <div class="form-control">
+            {{field.label_tag}}
+            {{field}}
+            {{field.errors}}
+
+
+        </div>
+
+        {% endfor %}
+
+        <button type="submit">Save comment</button>
+    </form>
+
+</section>
+
+
 
 
 {% endblock %}

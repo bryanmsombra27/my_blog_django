@@ -77,3 +77,61 @@ main {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  font: herit;
+  padding: 0.25rem;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#comment-form {
+  margin: 3rem auto;
+  width: 90%;
+  border-radius: 12px;
+  max-width: 40rem;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+#comment-form button {
+  font: herit;
+  background-color: purple;
+  color: white;
+  border: 1px solid purple;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
+#comment-form button:hover,
+#comment-form button:active {
+  --bg: rgb(197, 7, 197);
+
+  background-color: var(--bg);
+  border: 1px solid var(--bg);
+}
