@@ -102,7 +102,9 @@ main {
   border: 1px solid #ccc;
 }
 
-#comment-form {
+#comment-form,
+#comments {
+  background: white;
   margin: 3rem auto;
   width: 90%;
   border-radius: 12px;
@@ -134,4 +136,85 @@ main {
 
   background-color: var(--bg);
   border: 1px solid var(--bg);
+}
+
+.errorlist {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+  color: rgb(173, 53, 53);
+}
+
+.invalid label {
+  color: rgb(173, 53, 53);
+}
+.invalid input,
+.invalid textarea {
+  border-color: rgb(173, 53, 53);
+  background-color: rgba(223, 70, 70, 0.76);
+}
+
+#alert {
+  margin: 8rem auto 3rem auto;
+  border: 1px solid rgb(194, 61, 61);
+  background-color: #fff;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40%;
+}
+
+#alert a {
+  text-decoration: none;
+  border: 1px solid rgb(194, 61, 61);
+  background-color: rgb(194, 61, 61);
+  color: white;
+  padding: 0.25rem 1.5rem;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+#comments ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#comments li {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+}
+
+#comments li:last-of-type {
+  border-bottom: none;
+}
+
+#comments h2 {
+  color: #464646;
+}
+
+#read-later {
+  margin: 2rem 0;
+}
+
+#read-later button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 2rem;
+  font: inherit;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+#read-later button:active,
+#read-later button:hover {
+  background-color: #fff;
+  color: purple;
 }
